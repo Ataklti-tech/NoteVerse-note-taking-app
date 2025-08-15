@@ -5,7 +5,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebas
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCHygAvW6OpLFzObiLySReZi7-c_pu-u00",
+  apiKey: "",
   authDomain: "my-note-taking-project.firebaseapp.com",
   projectId: "my-note-taking-project",
   storageBucket: "my-note-taking-project.firebasestorage.app",
