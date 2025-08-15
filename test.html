@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .search-bar {
+      flex-grow: 1;
+      margin: 0 10px;
+      padding: 5px;
+    }
+
+    .app-container {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #f1f3f5;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .create-note {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .note-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .note {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+    }
+
+    .note.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .note-content {
+      flex-grow: 1;
+      padding: 20px;
+      background-color: white;
+    }
+
+    .note-header {
+      margin-bottom: 10px;
+    }
+
+    .note-body {
+      margin-bottom: 20px;
+    }
+
+    .note-actions button {
+      margin-right: 10px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .save-note {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .cancel-note {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .note-controls {
+      width: 200px;
+      padding: 10px;
+      background-color: #f1f3f5;
+    }
+
+    .note-controls button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .archive-note {
+      background-color: #ffc107;
+    }
+
+    .delete-note {
+      background-color: #dc3545;
+      color: white;
+    }
+  </style>
+  <body>
+    <header class="navbar">
+      <h1>Notes</h1>
+      <input
+        type="text"
+        class="search-bar"
+        placeholder="Search by title, content, or tags..."
+      />
+      <button class="settings-btn">⚙️</button>
+    </header>
+    <div class="app-container">
+      <aside class="sidebar">
+        <button class="create-note">+ Create New Note</button>
+        <ul class="note-list">
+          <li class="note active">React Performance Optimization</li>
+          <li class="note">Japan Travel Planning</li>
+          <li class="note">Favorite Pasta Recipes</li>
+          <li class="note">Weekly Workout Plan</li>
+          <li class="note">Meal Prep Ideas</li>
+          <li class="note">Reading List</li>
+          <li class="note">Fitness Goals 2025</li>
+        </ul>
+      </aside>
+      <main class="note-content">
+        <div class="note-header">
+          <h1>React Performance Optimization</h1>
+          <span class="tags">Dev, React</span>
+          <p>Last edited: 29 Oct 2024</p>
+        </div>
+        <div class="note-body">
+          <p><strong>Key performance optimization techniques:</strong></p>
+          <ol>
+            <li>
+              <strong>Code Splitting</strong><br />
+              - Use React.lazy() for route-based splitting<br />
+              - Implement dynamic imports for heavy components
+            </li>
+            <li>
+              <strong>Memoization</strong><br />
+              - useMemo for expensive calculations<br />
+              - useCallback for function props<br />
+              - React.memo for component optimization
+            </li>
+            <li>
+              <strong>Virtual List Implementation</strong><br />
+              - Use react-window for long lists<br />
+              - Implement infinite scrolling
+            </li>
+          </ol>
+          <p>
+            <strong>TODO:</strong> Benchmark current application and identify
+            bottlenecks
+          </p>
+        </div>
+        <div class="note-actions">
+          <button class="save-note">Save Note</button>
+          <button class="cancel-note">Cancel</button>
+        </div>
+      </main>
+      <aside class="note-controls">
+        <button class="archive-note">Archive Note</button>
+        <button class="delete-note">Delete Note</button>
+      </aside>
+    </div>
+  </body>
+</html>

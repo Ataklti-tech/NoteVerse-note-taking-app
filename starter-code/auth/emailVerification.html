@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Verification</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      display: grid;
+      place-items: center;
+    }
+    .container {
+      width: 35%;
+      border: 1px solid rgb(80, 64, 64);
+      padding: 20px;
+      border-radius: 4px;
+      margin: 20px auto;
+    }
+    .card {
+      background-color: #f0f0f0;
+      padding: 10px 10px;
+      border-radius: 2px;
+    }
+    .header {
+      background-color: #335cff;
+      padding: 15px 12px;
+      color: #fff;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .meta {
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .resend-btn {
+      background-color: #f41d1d;
+      padding: 8px 15px;
+      border: none;
+      color: #fff;
+      border-radius: 2px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  </style>
+  <body>
+    <!-- Email Verification -->
+    <div class="container" id="email-verification">
+      <div class="card">
+        <div class="header">Verification Email Sent</div>
+        <div class="meta">
+          we've sent an email for verification. Please click the link in the
+          email and confirm.
+        </div>
+        <div class="extra content">
+          <button class="resend-btn" id="resend-email-btn">Resend</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="firebase.js" type="module"></script>
+    <script src="test.js" type="module"></script>
+  </body>
+</html>
